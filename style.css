@@ -1,0 +1,264 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(-45deg, maroon, gold, gold, gold,maroon, gold, gold, gold,  maroon);
+}
+@media (max-width:500px){
+  .container{
+    width: 95vw;
+    height: 50vh;
+  }
+  header{
+    font-size: larger;
+    font-weight: bold;
+  }
+  footer{
+    font-size: smaller;
+    height: 3.5vh;
+  }
+  aside{
+    width: 46vw;
+    height: 38vh;
+    /* margin: 1vh 1vw; */
+    position: absolute;
+    bottom: 4.5vh;
+    left: 2.5vw;
+    font-size: small;
+    /* padding: 2px; */
+    /* padding-top: 0px; */
+  }
+  .aside2{
+    width: 46vw;
+    height: 38vh;
+    /* margin: 1vh 1vw;posi */
+    position: absolute;
+    bottom: 4.5vh;
+    right: 2.5vw;
+  }
+  .head2{
+    margin-bottom: 10px;
+  }
+  .head2{
+    margin: 10px 10px;
+  }
+  .menu{
+    margin: 10px 2px;
+    padding: 5px;
+  }
+  .description{
+    padding-left: 5px;
+  }
+  .newgame{
+
+    margin: 0px 3px;
+  }
+  
+
+
+}
+@media (min-width:500px){
+  .container{
+    width: 60vw;
+    height: 85vh;
+  }
+  header{
+    font-size: xx-large;
+    font-weight: bolder;
+
+  }
+  footer{
+    font-size: x-large;
+    font-weight: bold;
+    height: 5vh;
+  }
+  aside{
+    width: 17vw;
+    height: 85vh;
+    padding: 3px;
+    position: absolute;
+    top: 8.3%;
+    left: 1.5vw;
+    border: 1px solid black;
+    border-radius: 10px;
+    border: 7px solid aquamarine;
+    border-style: inset;
+    background-color: gold;
+    color: maroon;
+  }
+  .aside2{
+    height: 85vh;
+    width: 17vw;
+    padding: 3px;
+    position: absolute;
+    top: 8.3%;
+    right: 1.5vw;
+
+  }
+  aside>.head, .aside2>.head2{
+   
+    padding: 3px 7px;
+    
+       margin-top: 15px;
+    margin-bottom: 5px;
+  }
+  aside>.welcome{
+    margin-top: 70px;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  aside>.description{
+    margin-top: 80px;
+    margin-bottom: 5px;
+  }
+
+  .menu{
+   
+    padding: 3px;
+    margin-top: 50px;
+    /* visibility: ; */
+  }
+  .newgame{
+   margin-top: 20px;
+  }
+}
+.menu{
+  /* border: 1px solid gold; */
+}
+aside>.head, .head2{
+  border: 1px solid gold;
+  color: gold;
+  border-radius: 2px;
+  text-align: center;
+  width: fit-content;
+  margin: auto;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  padding: 3px 7px;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+.aside2, aside{
+  border: 1px solid black;
+  border-radius: 10px;
+  border: 7px solid aquamarine;
+  border-style: inset;
+  background-color: gold;
+  color: maroon;
+  
+}
+aside, .aside2{
+  background-color: maroon;
+
+}
+.newgame{
+  border: 1px solid gold;
+  padding: 3px;
+  color: gold;
+  border-radius: 3px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.5s;
+  margin-bottom: 20px;
+
+}
+.newgame:hover{
+  color: maroon;
+  background-color: gold;
+  /* border: 1px solid ma; */
+}
+.aside2>.head2{
+  padding: 3px 15px;
+  border-radius: 2px;
+  border: 1px solid gold;
+  width: fit-content;
+  margin: auto;
+  margin-top: 15px;
+}
+.menu, .description, .welcome{
+  
+  color: gold;
+  background-color: maroon;
+}
+header{
+      background-color: aquamarine;
+       text-align: center;
+       color: aqua;
+       -webkit-text-stroke: 1px maroon;
+      cursor: none;
+       padding: 5px;
+       margin-bottom: 5px;
+}
+.container {
+  border-radius: 10px;
+  border: 7px solid aquamarine;
+  border-style: inset;
+ margin:auto;
+  padding: 10px;
+  padding-top: 5px;
+  padding-left: 5px;
+  /* background: linear-gradient(45deg, aqua, yellow, aquamarine, blue); */
+  display: grid;
+  background-color: maroon;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+}
+
+#card {
+
+  margin: 3px;
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+  position: relative;
+  z-index: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  background-size: cover;
+  border-radius: 10px;
+}
+
+#card img {
+
+  width: 95%;
+  height: 95%;
+  position: absolute;
+  border-radius: 10px;
+  backface-visibility: hidden;
+  transition: 1s;
+}
+
+#card img:nth-child(2) {
+  transform: rotateY(180deg);
+}
+
+.img2Ani {
+  transform: rotateY(0deg);
+}
+
+.img1Ani {
+  transform: rotateY(-180deg);
+}
+
+footer{
+  background-color: aquamarine;
+  text-align: center;
+  color: aqua;
+  -webkit-text-stroke: 1px maroon;
+ 
+  padding: 5px;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  /* height: 3.5vh; */
+  /* margin-bottom: 5px; */
+}
